@@ -16,7 +16,6 @@ interface PreactInfo {
   redir: string;
   challenge: string;
   difficulty: number;
-  connection_security_message: string;
   loading_message: string;
   pensive_url: string;
 }
@@ -74,10 +73,7 @@ const App = () => {
         <img src={imageURL} style={{ width: "100%", maxWidth: "256px" }} />
       )}
       {state !== undefined && (
-        <>
-          <p id="status">{state.loading_message}</p>
-          <p>{state.connection_security_message}</p>
-        </>
+        <p id="status">{state.loading_message}</p>
       )}
     </>
   );
